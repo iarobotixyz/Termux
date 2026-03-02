@@ -11,9 +11,10 @@ git clone https://github.com/iarobotixyz/Termux.git
 echo "Descargando roboticaXYZ....."
 
 cd Termux
+bash RoboticaXYZ.sh ;;
 #chmod +x *.sh
 #chmod +x modules/*.sh
 
 echo "Instalaci贸n completada."
-
-echo "Ejecuta con: bash roboticaxyz.sh"
+echo "Ejecuta con:"
+echo "bash roboticaxyz.sh"
