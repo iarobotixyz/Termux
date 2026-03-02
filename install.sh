@@ -6,8 +6,8 @@ echo "Instalando RoboticaXYZ Termux Pro 1.0..."
 pkg update -y
 pkg install git curl figlet neofetch -y
 
-#cd $HOME
-#git clone https://github.com/roboticaxyz/termux-pro.git
+cd $HOME
+git clone https://github.com/iarobotixyz/Termux.git
 echo "Descargando roboticaXYZ....."
 
 #cd termux-pro
