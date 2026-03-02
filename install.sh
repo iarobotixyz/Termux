@@ -10,7 +10,7 @@ cd $HOME
 git clone https://github.com/iarobotixyz/Termux.git
 echo "Descargando roboticaXYZ....."
 
-cd termux
+cd Termux
 #chmod +x *.sh
 #chmod +x modules/*.sh
 
