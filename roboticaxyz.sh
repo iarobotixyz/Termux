@@ -1,12 +1,15 @@
 #!/bin/bash
 
-BASE_DIR="$HOME/roboticaxyz"
+BASE_DIR="$HOME/RoboticaXYZ"
 MODULES_DIR="$BASE_DIR/modulos"
 CONFIG="$BASE_DIR/config.cfg"
+DOC="$BASE_DIR/Documentos"
+
 
 init_system() {
     mkdir -p $MODULES_DIR
     touch $CONFIG
+    touch $DOC
 }
 
 color() {
