@@ -1,15 +1,17 @@
 #!/bin/bash
 
 BASE_DIR="$HOME/RoboticaXYZ"
-MODULES_DIR="$BASE_DIR/modulos"
+MODULES_DIR="$BASE_DIR/Modulos"
+DOC_DIR="$BASE_DIR/Documentos"
 CONFIG="$BASE_DIR/config.cfg"
-DOC="$BASE_DIR/Documentos"
+VER="$BASE_DIR/Version.txt"
 
 
 init_system() {
     mkdir -p $MODULES_DIR
+    mkdir -p $DOC_DIR
     touch $CONFIG
-    touch $DOC
+    touch $VER
 }
 
 color() {
@@ -18,7 +20,7 @@ color() {
 
 main_menu() {
     clear
-    color "================ ROBOTICAXYZ TERMUX PRO ================"
+    color "================ ROBOTICAXYZ TERMUX ================"
     echo "1) Sistema"
     echo "2) Programación"
     echo "3) Redes y Servidores"
