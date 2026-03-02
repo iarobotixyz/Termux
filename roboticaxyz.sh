@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASE_DIR="$HOME/roboticaxyz"
-MODULES_DIR="$BASE_DIR/modules"
+MODULES_DIR="$BASE_DIR/modulos"
 CONFIG="$BASE_DIR/config.cfg"
 
 init_system() {
