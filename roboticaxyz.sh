@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BASE="$HOME/termux-pro"
-MODULES="$BASE/modules"
+BASE="$HOME/termux"
+MODULES="$BASE/modulos"
 VERSION=$(cat $BASE/version.txt)
 
 banner() {
