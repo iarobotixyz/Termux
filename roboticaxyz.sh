@@ -1,43 +1,45 @@
 #!/bin/bash
 
-BASE="$HOME/termux"
-MODULES="$BASE/modulos"
-VERSION=$(cat $BASE/version.txt)
+BASE_DIR="$HOME/roboticaxyz"
+MODULES_DIR="$BASE_DIR/modules"
+CONFIG="$BASE_DIR/config.cfg"
 
-banner() {
-    clear
-    figlet "RoboticaXYZ"
-    echo "Termux Pro v$VERSION"
-    echo "======================================="
-    sleep 1
+init_system() {
+    mkdir -p $MODULES_DIR
+    touch $CONFIG
+}
+
+color() {
+    echo -e "\e[1;32m$1\e[0m"
 }
 
 main_menu() {
-    banner
+    clear
+    color "================ ROBOTICAXYZ TERMUX PRO ================"
     echo "1) Sistema"
     echo "2) Programación"
     echo "3) Redes y Servidores"
     echo "4) Electrónica e IoT"
     echo "5) Sismología (SSN)"
     echo "6) Extras"
-    echo "7) Actualizar Plataforma"
-    echo "8) Información del Sistema"
+    echo "7) Actualizar Sistema"
     echo "0) Salir"
-    echo "======================================="
+    echo "========================================================="
     read -p "Selecciona opción: " opt
 
     case $opt in
-        1) bash $MODULES/sistema.sh ;;
-        2) bash $MODULES/programacion.sh ;;
-        3) bash $MODULES/redes.sh ;;
-        4) bash $MODULES/iot.sh ;;
-        5) bash $MODULES/sismologia.sh ;;
-        6) bash $MODULES/extras.sh ;;
-        7) bash $BASE/update.sh ;;
-        8) neofetch ;;
+        1) bash $MODULES_DIR/sistema.sh ;;
+        2) bash $MODULES_DIR/programacion.sh ;;
+        3) bash $MODULES_DIR/redes.sh ;;
+        4) bash $MODULES_DIR/iot.sh ;;
+        5) bash $MODULES_DIR/sismologia.sh ;;
+        6) bash $MODULES_DIR/extras.sh ;;
+        7) bash $BASE_DIR/update.sh ;;
         0) exit ;;
     esac
 }
+
+init_system
 
 while true; do
     main_menu
